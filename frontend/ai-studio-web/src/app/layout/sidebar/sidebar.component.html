@@ -1,3 +1,13 @@
-<aside>
-  Sidebar
-</aside>
+<nav class="sidebar">
+  <a
+    *ngFor="let item of menuItems"
+    [routerLink]="item.route"
+    routerLinkActive="active"
+    class="menu-item">
+
+    <span class="material-icons">{{ item.icon }}</span>
+
+    <span>{{ item.title }}</span>
+
+  </a>
+</nav>
