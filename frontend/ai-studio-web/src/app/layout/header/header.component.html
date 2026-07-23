@@ -1,3 +1,96 @@
-<header>
-  AI-STUDIO Header
+<header class="header">
+
+
+  <div class="left-section">
+
+
+    <button 
+      mat-icon-button
+      class="menu-btn"
+      (click)="toggleSidebar()">
+
+      <mat-icon>
+        menu
+      </mat-icon>
+
+    </button>
+
+
+    <div class="logo">
+      AI-STUDIO
+    </div>
+
+
+  </div>
+
+
+
+
+  <div class="center-section">
+
+
+    <input 
+      type="text"
+      placeholder="Search projects..." />
+
+
+  </div>
+
+
+
+
+  <div class="right-section">
+
+
+    <button 
+      mat-icon-button
+      class="icon-btn"
+      (click)="themeService.toggleTheme()">
+
+
+      <mat-icon>
+
+        {{ themeService.isDark() 
+        ? 'light_mode' 
+        : 'dark_mode' }}
+
+      </mat-icon>
+
+
+    </button>
+
+
+
+
+    <button 
+      mat-icon-button
+      class="icon-btn">
+
+
+      <mat-icon>
+        notifications
+      </mat-icon>
+
+
+    </button>
+
+
+
+
+    <button 
+      mat-icon-button
+      class="icon-btn">
+
+
+      <mat-icon>
+        account_circle
+      </mat-icon>
+
+
+    </button>
+
+
+  </div>
+
+
 </header>

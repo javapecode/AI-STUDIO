@@ -1,0 +1,48 @@
+<div class="canvas-container">
+
+  <div
+  class="canvas"
+  (dragover)="allowDrop($event)"
+  (drop)="onDrop($event)"
+ (mousemove)="onMouseMove($event)"
+  (mouseup)="stopDrag()"
+  (mouseleave)="stopDrag()"
+>
+@for (element of elements(); track element.id) {
+
+  @if (element.visible) {
+
+    <div
+      class="canvas-item"
+      [class.selected]="element.selected"
+      [style.left.px]="element.x"
+      [style.top.px]="element.y"
+      [style.width.px]="element.width"
+      [style.height.px]="element.height"
+      (mousedown)="startDrag($event, element)"
+      (click)="selectElement(element.id)"
+    >
+
+      <img
+        class="canvas-image"
+        [src]="element.src"
+        draggable="false"
+      />
+
+      @if (element.selected) {
+
+        <div class="resize-handle top-left"></div>
+        <div class="resize-handle top-right"></div>
+        <div class="resize-handle bottom-left"></div>
+       <div
+    class="resize-handle bottom-right"
+    (mousedown)="startResize($event, element)">
+</div>
+
+      }
+
+    </div>
+
+  }
+
+}

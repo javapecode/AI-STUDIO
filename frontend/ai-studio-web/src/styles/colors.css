@@ -1,0 +1,28 @@
+:root {
+
+    /* Brand */
+    --primary: #1976d2;
+    --primary-hover: #1565c0;
+
+    /* Layout */
+    --header-bg: var(--primary);
+    --sidebar-bg: #263238;
+    --sidebar-hover: #37474f;
+    --sidebar-active: #1565c0;
+
+    /* Background */
+    --background: #f4f6f9;
+    --surface: #ffffff;
+
+    /* Text */
+    --text-primary: #212121;
+    --text-secondary: #6b7280;
+
+    /* Border */
+    --border: #e5e7eb;
+
+    /* Status */
+    --success: #2e7d32;
+    --warning: #f59e0b;
+    --danger: #d32f2f;
+}

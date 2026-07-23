@@ -1,0 +1,215 @@
+.timeline-content {
+
+    display: grid;
+
+    grid-template-columns: 120px minmax(0, 1fr);
+
+    height: 100%;
+
+}
+
+
+/* Left Side */
+
+.left-column {
+
+    border-right: 1px solid var(--border);
+
+    background: var(--background);
+
+}
+
+
+/* Right Side */
+
+.right-column {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* Empty Header */
+
+.track-header {
+
+    height: 28px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+/* Track Name */
+
+.track-name {
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 12px;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+/* Time Ruler */
+
+.timeline-ruler {
+
+    display: flex;
+
+    height: 28px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+/* Track Area */
+
+.track-content {
+
+    height: 48px;
+
+    border-bottom: 1px solid var(--border);
+
+    position: relative;
+
+}
+
+
+/* Playhead */
+
+.playhead {
+
+    position: absolute;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 2px;
+
+    background: #ff3b30;
+
+    z-index: 100;
+
+    pointer-events: none;
+
+}
+
+
+/* Playhead Handle */
+
+.playhead::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -4px;
+
+    left: -4px;
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #ff3b30;
+
+}.timeline-item{
+
+    position:absolute;
+
+    top:6px;
+
+    height:34px;
+
+    background:#1976d2;
+
+    color:#fff;
+
+    border-radius:6px;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+.timeline-item:hover{
+
+    background:#1565c0;
+
+}
+
+.timeline-item.selected{
+
+    outline:2px solid #ff9800;
+
+}
+
+.clip-title{
+
+    font-size:12px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    padding:0 8px;
+
+}
+.clip-content{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:0 10px;
+
+    width:100%;
+
+}.clip-content span{
+
+    font-size:12px;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+}
+
+.clip-content mat-icon{
+
+    font-size:16px;
+
+    width:16px;
+
+    height:16px;
+
+}

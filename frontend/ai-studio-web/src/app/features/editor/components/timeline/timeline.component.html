@@ -1,0 +1,75 @@
+<div class="timeline">
+
+  <app-timeline-toolbar></app-timeline-toolbar>
+
+  <div class="timeline-content">
+
+    <!-- Left Panel -->
+    <div class="left-column">
+
+      <div class="track-header">
+        Tracks
+      </div>
+
+      <div class="track-name" *ngFor="let track of timelineService.tracks()">
+
+        {{ track.name }}
+
+      </div>
+
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right-column">
+
+      <!-- Playhead -->
+      <div class="playhead" [style.left.px]="playheadPosition">
+      </div>
+
+      <!-- Timeline Ruler -->
+      <div class="timeline-ruler">
+
+        <div class="time-mark" *ngFor="let second of seconds" [style.width.px]="pixelsPerSecond">
+
+          {{ second }}
+
+        </div>
+
+      </div>
+
+      <!-- Timeline Tracks -->
+      <div
+    class="track-content"
+    *ngFor="let track of timelineService.tracks()"
+    (dragover)="allowDrop($event)"
+    (drop)="dropAsset($event, track)">
+
+        <div class="timeline-item" *ngFor="let item of track.items" [class.selected]="item.selected"
+          [style.left.px]="item.startTime * pixelsPerSecond" [style.width.px]="item.duration * pixelsPerSecond"
+          (click)="selectItem(item)">
+
+          <div class="clip-content">
+
+            <mat-icon>
+
+              image
+
+            </mat-icon>
+
+            <span>
+
+              {{ item.name }}
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

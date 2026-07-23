@@ -1,0 +1,88 @@
+.editor-layout {
+
+    height: calc(100vh - var(--header-height));
+
+    display: grid;
+
+    /* Sidebar | Canvas | Properties */
+    grid-template-columns: 220px minmax(0, 1fr) 260px;
+
+    /* Canvas | Timeline */
+    grid-template-rows: minmax(0, 1fr) 240px;
+
+    background: var(--background);
+
+    overflow: hidden;
+
+}
+
+
+/* Left Panel */
+
+.left-panel {
+
+    grid-column: 1;
+    grid-row: 1;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    border-right: 1px solid var(--border);
+
+    background: var(--surface);
+
+}
+
+
+/* Canvas */
+
+.canvas-area {
+
+    grid-column: 2;
+    grid-row: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 12px;
+
+    overflow: hidden;
+
+}
+
+
+/* Properties */
+
+.right-panel {
+
+    grid-column: 3;
+    grid-row: 1;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    border-left: 1px solid var(--border);
+
+    background: var(--surface);
+
+}
+
+
+/* Timeline */
+
+.timeline-area {
+
+    grid-column: 1 / 4;
+    grid-row: 2;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    border-top: 1px solid var(--border);
+
+    background: var(--surface);
+
+}

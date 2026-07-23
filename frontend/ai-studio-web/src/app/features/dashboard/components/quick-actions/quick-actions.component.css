@@ -1,0 +1,99 @@
+.panel {
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+}
+
+.panel h3 {
+
+    margin-top:0;
+
+    color:var(--text-primary);
+
+}
+
+.actions {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+
+.action-btn {
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+    text-align:left;
+
+    transition:.3s ease;
+
+}
+
+
+
+.action-btn:hover {
+
+    background:var(--primary-hover);
+
+}
+
+
+
+.icon {
+
+    font-size:24px;
+
+}
+
+
+
+.action-btn strong {
+
+    display:block;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+
+
+.action-btn small {
+
+    display:block;
+
+    margin-top:4px;
+
+    color:rgba(255,255,255,.8);
+
+}

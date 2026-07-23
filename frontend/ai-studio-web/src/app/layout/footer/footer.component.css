@@ -1,8 +1,15 @@
 footer {
-  height: 40px;
-  background: #1976d2;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+    height: var(--footer-height);
+
+    background: var(--primary);
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
 }

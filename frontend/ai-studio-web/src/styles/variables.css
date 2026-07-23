@@ -1,0 +1,21 @@
+:root {
+
+  /* Layout */
+ --header-height: 56px;
+  --footer-height: 50px;
+
+--sidebar-width: 220px;
+--sidebar-collapsed-width: 68px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* Shadow */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.12);
+
+  /* Transition */
+  --transition: 0.3s ease;
+}

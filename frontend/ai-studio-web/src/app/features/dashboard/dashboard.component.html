@@ -1,3 +1,22 @@
-<h2>Dashboard</h2>
+<app-welcome-banner></app-welcome-banner>
 
-<p>Welcome to AI-STUDIO Dashboard</p>
+<!-- Stats -->
+<div class="stats">
+
+    <app-dashboard-card
+        *ngFor="let stat of stats"
+        [title]="stat.title"
+        [value]="stat.value"
+        [icon]="stat.icon">
+    </app-dashboard-card>
+
+</div>
+
+<!-- Bottom Section -->
+<div class="dashboard-grid">
+
+    <app-recent-projects></app-recent-projects>
+
+    <app-quick-actions></app-quick-actions>
+
+</div>

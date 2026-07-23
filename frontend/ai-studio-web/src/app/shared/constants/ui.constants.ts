@@ -1,0 +1,9 @@
+export const UI_CONSTANTS = {
+
+  DEFAULT_BUTTON_SIZE: 'medium',
+
+  DEFAULT_BORDER_RADIUS: '8px',
+
+  ANIMATION_DURATION: 250
+
+};

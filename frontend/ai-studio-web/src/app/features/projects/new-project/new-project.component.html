@@ -1,0 +1,115 @@
+<div class="project-page">
+
+
+    <h1>
+        Create New Project
+    </h1>
+
+
+
+    <div class="project-card">
+ <div class="project-content">
+
+        <h3>
+            Project Name
+        </h3>
+
+
+        <input type="text" [(ngModel)]="project.name" placeholder="Enter project name">
+
+
+
+
+
+        <h3>
+            Select Canvas Size
+        </h3>
+
+
+        <div class="size-grid">
+
+
+            <div class="size-card" *ngFor="let size of screenSizes" [class.active]="project.aspectRatio===size.ratio"
+                (click)="selectSize(size)">
+
+
+                <strong>
+
+                    {{size.ratio}}
+
+                </strong>
+
+
+                <span>
+
+                    {{size.name}}
+
+                </span>
+
+
+                <small>
+
+                    {{size.resolution}}
+
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <h3>
+            Choose Template
+        </h3>
+
+
+        <div class="template-grid">
+
+
+            <div class="template-card" *ngFor="let temp of templates" [class.active]="project.template===temp.id"
+                (click)="selectTemplate(temp)">
+
+
+                <div>
+
+                    {{temp.icon}}
+
+                </div>
+
+
+                <p>
+
+                    {{temp.name}}
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+</div>
+ <div class="project-footer">
+        <button class="create-btn" (click)="createProject()">
+
+
+            Create Project
+
+
+        </button>
+
+
+
+    </div>
+    
+</div>
+
+</div>

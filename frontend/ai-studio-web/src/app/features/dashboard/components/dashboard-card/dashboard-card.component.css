@@ -1,0 +1,102 @@
+.dashboard-card {
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 16px;
+
+    transition: .25s ease;
+
+    cursor: pointer;
+
+}
+
+.dashboard-card:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.10);
+
+}
+
+
+/* Header */
+
+.card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+/* Icon */
+
+.icon-box {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+
+.icon-box mat-icon {
+
+    width: 20px;
+
+    height: 20px;
+
+    font-size: 20px;
+
+}
+
+
+/* Title */
+
+.card-header h3 {
+
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+}
+
+
+/* Value */
+
+.dashboard-card h1 {
+
+    margin: 14px 0 0;
+
+    color: var(--text-primary);
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+}

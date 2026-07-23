@@ -1,0 +1,53 @@
+<div class="toolbar">
+
+    <!-- Left Tools -->
+    <div class="toolbar-left">
+
+        <ng-container *ngFor="let item of toolButtons">
+
+            <ng-container *ngIf="item.action !== 'properties'">
+
+                <div
+                    class="divider"
+                    *ngIf="item.type === 'divider'">
+                </div>
+
+                <button
+                    *ngIf="item.type === 'button'"
+                    class="tool-btn"
+                    mat-icon-button
+                    [matTooltip]="item.tooltip!"
+                    (click)="onToolbarClick(item.action)">
+
+                    <mat-icon>{{ item.icon }}</mat-icon>
+
+                </button>
+
+            </ng-container>
+
+        </ng-container>
+
+    </div>
+<input
+#fileInput
+type="file"
+hidden
+multiple
+accept="image/*,video/*,audio/*"
+(change)="onFileSelected($event)">
+    <!-- Right Side -->
+    <div class="toolbar-right">
+
+        <button
+            class="tool-btn"
+            mat-icon-button
+            matTooltip="Properties Panel"
+            (click)="onToolbarClick('properties')">
+
+            <mat-icon>tune</mat-icon>
+
+        </button>
+
+    </div>
+
+</div>

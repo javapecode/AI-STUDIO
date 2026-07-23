@@ -1,0 +1,64 @@
+<div class="asset-panel">
+    <h3>
+        Assets
+    </h3>
+    <mat-tab-group>
+        <mat-tab label="Images">
+            <input type="file" hidden multiple accept="image/*" #imageInput (change)="addImages($event)">
+            <button class="upload-btn" (click)="imageInput.click()">
+                <mat-icon>
+                    upload
+                </mat-icon>
+
+                Upload Images
+
+            </button>
+
+            <div class="asset-grid">
+
+                <div class="asset-card" *ngFor="let img of images; let i = index" draggable="true"
+                    (dragstart)="startDrag($event, img)">
+
+                    <img [src]="img.url">
+
+                    <span>{{ img.name }}</span>
+
+                    <button class="delete-btn" (click)="removeImage(i); $event.stopPropagation()">
+
+                        ✕
+
+                    </button>
+
+                </div>
+
+            </div>
+        </mat-tab>
+        <mat-tab label="Videos">
+            <input type="file" hidden multiple accept="video/*" #videoInput (change)="addVideos($event)">
+            <button class="upload-btn" (click)="videoInput.click()">
+                Upload Videos
+
+            </button>
+
+            <div class="file-item" *ngFor="let video of videos;let i=index">
+                🎬 {{video.name}}
+
+                <button (click)="removeVideo(i)">
+                    ✕
+                </button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Music">
+            <input type="file" hidden accept="audio/*" #musicInput (change)="addMusic($event)">
+            <button class="upload-btn" (click)="musicInput.click()">
+                Upload Music
+            </button>
+            <div class="file-item" *ngFor="let song of music;let i=index">
+                🎵 {{song.name}}
+                <button (click)="removeMusic(i)">
+                    ✕
+                </button>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

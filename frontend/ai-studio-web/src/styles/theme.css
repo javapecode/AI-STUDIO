@@ -1,0 +1,21 @@
+.dark-theme{
+
+    --header-bg:#1f1f1f;
+
+    --sidebar-bg:#111827;
+
+    --sidebar-hover:#1f2937;
+
+    --sidebar-active:#2563eb;
+
+    --background:#0f172a;
+
+    --surface:#1e293b;
+
+    --text-primary:#ffffff;
+
+    --text-secondary:#cbd5e1;
+
+    --border:#334155;
+
+}

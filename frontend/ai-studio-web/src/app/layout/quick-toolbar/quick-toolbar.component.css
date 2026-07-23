@@ -1,0 +1,175 @@
+.toolbar{
+
+    height:42px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 10px;
+
+    background:var(--surface);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.toolbar-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:4px;
+
+}
+
+.toolbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-left:auto;
+
+    padding-left:10px;
+
+    border-left:1px solid var(--border);
+
+}
+
+.toolbar::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+/* Buttons */
+
+.tool-btn{
+
+    width:32px;
+
+    height:32px;
+
+    border:none;
+
+    border-radius:8px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+    background:transparent;
+
+}
+
+
+/* Hover */
+
+.tool-btn:hover{
+
+    transform:translateY(-1px);
+
+}
+
+
+/* Icons */
+
+.tool-btn mat-icon{
+
+    width:18px;
+
+    height:18px;
+
+    font-size:18px;
+
+}
+
+
+/* Color Groups */
+
+.tool-btn:nth-child(1),
+.tool-btn:nth-child(2),
+.tool-btn:nth-child(3){
+
+    color:#2196F3;
+
+}
+
+.tool-btn:nth-child(5),
+.tool-btn:nth-child(6){
+
+    color:#FF9800;
+
+}
+
+.tool-btn:nth-child(8),
+.tool-btn:nth-child(9),
+.tool-btn:nth-child(10){
+
+    color:#F44336;
+
+}
+
+.tool-btn:nth-child(12),
+.tool-btn:nth-child(13){
+
+    color:#9C27B0;
+
+}
+
+.tool-btn:nth-child(15),
+.tool-btn:nth-child(16){
+
+    color:#4CAF50;
+
+}
+
+.tool-btn:nth-child(18),
+.tool-btn:nth-child(19),
+.tool-btn:nth-child(20){
+
+    color:#00BCD4;
+
+}
+
+
+/* Hover Background */
+
+.tool-btn:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+
+/* Divider */
+
+.divider{
+
+    width:1px;
+
+    height:18px;
+
+    background:var(--border);
+
+    margin:0 6px;
+
+}
+.tool-btn.active{
+
+    background: var(--primary);
+
+    color: white;
+
+}

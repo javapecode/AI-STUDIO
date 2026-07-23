@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VideoEditorComponent } from './video-editor.component';
+import { AppButtonComponent } from './app-button.component';
 
-describe('VideoEditorComponent', () => {
-  let component: VideoEditorComponent;
-  let fixture: ComponentFixture<VideoEditorComponent>;
+describe('AppButtonComponent', () => {
+  let component: AppButtonComponent;
+  let fixture: ComponentFixture<AppButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [VideoEditorComponent]
+      imports: [AppButtonComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(VideoEditorComponent);
+    fixture = TestBed.createComponent(AppButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
